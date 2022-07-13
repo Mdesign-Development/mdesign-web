@@ -1,0 +1,61 @@
+.app{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(180deg, #2E3359 0%, #1C1F36 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.canvasModel{
+    width: 35%;
+    height: 100%;
+    pointer-events:none;
+    position: relative;
+    z-index: 90
+}
+.videoBack{
+    width: 100%;
+    height: 100%; 
+    position: absolute;
+    top:0;
+    left: 0;
+    mix-blend-mode: color-dodge;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1)
+}
+.hero{
+    width: 65%;
+    position: relative;
+    z-index: 90;
+    padding: 2%;
+}
+.hero>p{
+    width: 85%;
+    
+}
+@media (max-width: 600px) {
+    .app{
+        display: flex;
+        flex-direction: column-reverse
+    }
+    .canvasModel{
+        width: 100%;
+        height: 60%
+    }
+    .hero{
+        width: 100%;
+    }
+    .hero>p{
+        width: 100%;
+        
+    }
+    .videoBack{
+        
+        -webkit-transform: scaleY(1);
+        transform: scaleY(-1);
+    }
+}

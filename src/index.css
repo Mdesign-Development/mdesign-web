@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,900;1,300;1,400;1,900&family=Reem+Kufi:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(180deg, #2E3359 0%, #1C1F36 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+#root{
+  width: 100vw;
+  height: 100vh;
+}
+h1,h2,h3,h4, span{
+  font-family: 'Reem Kufi', sans-serif;
+  color:rgba(86, 242, 97, 1)
+}
+h1{
+  font-size: calc(2.625rem + ((1vw - 3.75px) * 5.5663));
+  font-weight: bold;
+}
+p{
+  color: white;
+  font-family: 'Merriweather', serif;
+  font-size: calc(0.75rem + ((1vw - 3.75px) * 0.5178));
+}
+span{
+  font-size: calc(1rem + ((1vw - 3.75px) * 0.5178));
+}
+
+@media (min-width: 1920px) {
+  h1 {
+    font-size: 128px;
+  }
+}

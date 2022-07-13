@@ -1,0 +1,64 @@
+.nav{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+.logo{
+    position: absolute;
+    width: 10%;
+    left: 2%;
+    top: 4%
+}
+.menu{
+    position: absolute;
+    width: 20%;
+    right: 1%;
+    bottom:0;
+    height: 96%;
+    border-right: 1px solid rgba(86, 242, 97, 1);
+}
+.itemMenu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: -12px;
+    margin-bottom: 24px;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+}
+
+.itemMenu:hover h4{
+    font-size: 24px;
+    color: white;
+    transition: all ease-in-out 0.2s;
+}
+
+.itemMenu:hover .lineMenu{
+    background-color: white;
+    transition: all ease-in-out 0.2s;
+}
+.txtMenu:hover path{
+    fill: white;
+    margin-top: 0px;
+    transition: all ease-in-out 0.2s;
+}
+.lineMenu{
+    width: 24px;
+    height: 1px;
+    margin-left: 8px;
+    background-color: rgba(86, 242, 97, 1);
+}
+
+.rrss{
+    position: absolute;
+    bottom: 4%;
+    right: 1%;
+}
+@media (max-width: 600px) {
+    .menu{
+        width: 48%;
+        right: 1%;;
+    }
+}
