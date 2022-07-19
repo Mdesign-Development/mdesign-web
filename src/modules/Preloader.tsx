@@ -5,14 +5,10 @@ const Preloader = () => {
 
     const videoRef=useRef<any>()
 
-    const play = () => {
-        videoRef.current.play();
-    }
-
     useEffect(() => {
         
         if(videoRef.current !== undefined){
-            play()
+            videoRef.current.play()
         }
             
     },[videoRef])

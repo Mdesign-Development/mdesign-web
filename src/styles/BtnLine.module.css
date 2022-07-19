@@ -1,3 +1,31 @@
 .btnLine{
-    border: 2px solid rgba(86, 242, 97, 1)
+    position: relative;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 320px;
+    padding: 8px;
+    border: 2px solid rgba(86, 242, 97, 1);
+    cursor: pointer;
+    z-index: 100;
+}
+.btnLine:hover{
+    border: 2px solid white;
+}
+.btnTxt{
+    font-family: 'Reem Kufi', sans-serif;
+    color: rgba(86, 242, 97, 1)
+}
+.btnLine:hover .btnTxt{
+    color: white
+}
+.btnLine:hover .btnIcon path{
+    fill: white
+}
+@media (max-width: 600px){
+    .btnLine{
+        position: relative;
+        margin: 0 auto
+    }
 }

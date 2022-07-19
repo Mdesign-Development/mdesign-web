@@ -33,6 +33,10 @@ h1{
   font-size: calc(2.625rem + ((1vw - 3.75px) * 5.5663));
   font-weight: bold;
 }
+h2{
+  font-size: calc(2.25rem + ((1vw - 3.2px) * 3.125));
+  font-weight: bold;
+}
 p{
   color: white;
   font-family: 'Merriweather', serif;
@@ -45,5 +49,8 @@ span{
 @media (min-width: 1920px) {
   h1 {
     font-size: 128px;
+  }
+  h2 {
+    font-size: 86px;
   }
 }

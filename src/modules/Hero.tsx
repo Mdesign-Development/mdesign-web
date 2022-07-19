@@ -4,7 +4,9 @@ import { Vector3, Camera, Color4 } from '@babylonjs/core'
 import '@babylonjs/loaders'
 import '@babylonjs/gui'
 import styles from '../styles/App.module.css'
-import SceneComponent from '../componets/SceneComponent'
+import SceneComponent from '../components/SceneComponent'
+import { IconTeam } from '../components/Icons'
+import BtnLine from '../components/BtnLine'
 
 interface Props{
     handleLoader:React.Dispatch<React.SetStateAction<boolean>>
@@ -28,12 +30,7 @@ const Hero = ({handleLoader}:Props) => {
 
     useEffect(() => {
 
-        /* console.log(camera)
-        console.log(scene)
-        console.log(model) */
-        if(scene){
-            scene.clearColor = new Color4(0, 0, 0, 0);
-        }
+        if( scene ){ scene.clearColor = new Color4(0, 0, 0, 0) }
         
     }, [camera, scene, model])
 
@@ -50,7 +47,7 @@ const Hero = ({handleLoader}:Props) => {
                         target={new Vector3(0,0,0)}
                         upperBetaLimit={1.45}
                         lowerBetaLimit={0}
-                        lowerRadiusLimit={30}
+                        lowerRadiusLimit={40}
                         upperRadiusLimit={150}
                         useAutoRotationBehavior={true }
                         onCreated={camera=>setCamera(camera)}
@@ -61,7 +58,7 @@ const Hero = ({handleLoader}:Props) => {
                             sceneFilename={'astronauta.glb'}
                             rootUrl={'/models/'}
                             scaling={new Vector3(120,120,120)}
-                            position={new Vector3(0,-35,0)}
+                            position={new Vector3(4,-35,0)}
                             pluginExtension={'.glb'}
                             onModelLoaded={(model)=>getDataModel(model)}
                         />
@@ -71,6 +68,7 @@ const Hero = ({handleLoader}:Props) => {
             <div className={styles.hero}>
                 <h1>MDesign</h1>
                 <p><span>MDesign</span> es un estudio creativo de productos digitales útiles, que se mantiene en constante innovación; más que un proveedor tecnológico, somos un aliado estratégico que contribuye en la evolución y transformación digital de cualquier emprendimiento</p>
+                <BtnLine txt={'Conoce el equipo'} icon={<IconTeam/>}/>
             </div>
         </>
     )

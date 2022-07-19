@@ -1,11 +1,12 @@
 import styles from '../styles/Nav.module.css'
-import {IconFacebook, IconInstagram, IconWhatsApp} from '../componets/Icons';
+import {IconFacebook, IconInstagram, IconWhatsApp} from './Icons'
 
 const Nav = () => {
+    
     return (
         <div className={styles.nav}>
             <div className={styles.logo}>
-                <img src="/img/logosingle.svg" alt="logo-mdesign" />
+                <img src="/img/logosingle.svg" alt="logo-mdesign" /> 
             </div>
             <div className={styles.menu}>
                 <ItemMenu txt={'¿Quiénes somos?'}/>
@@ -16,10 +17,11 @@ const Nav = () => {
             <div className={styles.rrss}>
                 <ItemMenu icon component={<IconFacebook />}/>
                 <ItemMenu icon component={<IconInstagram/>}/>
-                <ItemMenu icon component={<IconWhatsApp/>}/>
+                <ItemMenu icon component={<IconWhatsApp />}/>
             </div>
         </div>
     )
+
 }
 
 export default Nav
@@ -34,12 +36,7 @@ const ItemMenu = ({txt, icon, component}:ItemMenuProps) => {
     return(
         <div className={styles.itemMenu}>
             <div className={styles.txtMenu}>
-                {
-                    !icon && <h4>{txt}</h4>
-                }
-                {
-                    icon && component
-                }
+                { icon ? component : <h4>{txt}</h4> }
             </div>
             <div className={styles.lineMenu}></div>
         </div>

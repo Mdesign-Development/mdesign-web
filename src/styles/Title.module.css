@@ -1,0 +1,8 @@
+.accent{
+    color:white
+}
+.sub{
+    font-family: 'Merriweather', serif;
+    font-size: calc(1.625rem + ((1vw - 3.2px) * 1.125));
+    min-height: 0vw;
+}
