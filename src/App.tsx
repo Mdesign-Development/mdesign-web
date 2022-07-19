@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import Nav from './components/Nav'
+import { GlobalProvider } from './context/GlobalProvider'
 import Hero from './modules/Hero'
 import Preloader from './modules/Preloader'
 import Services from './modules/Services'
@@ -19,15 +20,18 @@ const App = () => {
   },[videoRef])
   
   return (
-    <div className={styles.app}>
-      <div className={styles.videoBack}>
-        <video muted ref={videoRef} src="/img/nebula_uno.mp4" autoPlay loop></video>
+    <GlobalProvider>
+      <div className={styles.app}>
+        <div className={styles.videoBack}>
+          <video muted ref={videoRef} src="/img/nebula_uno.mp4" autoPlay loop></video>
+        </div>
+        <Nav/>
+        {/* <Hero handleLoader={setIsLoading}/> */}
+        <Services/>
+        { isLoading && <Preloader /> }
       </div>
-      <Nav/>
-      {/* <Hero handleLoader={setIsLoading}/> */}
-      <Services/>
-      { isLoading && <Preloader /> }
-    </div>
+    </GlobalProvider>
+    
   )
 
 }

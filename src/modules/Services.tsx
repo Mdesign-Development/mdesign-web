@@ -9,7 +9,7 @@ const Services = () => {
     return (
         <div className={styles.services}>
             <div className={styles.txtBann}>
-                <Title txt={'Diseñamos'} sub accent mt={windowSize?.width!==undefined&&windowSize?.width<540?'48%':'0%'} ml={'-50%'} />
+                <Title txt={'Diseñamos'} sub accent mt={ windowSize?.width !== undefined && windowSize?.width < 540 ? '48%' : '2%' } ml={'-50%'} />
                 <Title txt={'Experiencias,'} accent mt={'-2%'} ml={'-24%'}/>
                 <Title txt={'creamos'} sub accent mt={'-2%'} ml={'-4%'}/>
                 <Title txt={'Herramientas'} mt={'-2%'} ml={'-4%'}/>
@@ -19,6 +19,7 @@ const Services = () => {
             
         </div>
     )
+    
 }
 
 export default Services
